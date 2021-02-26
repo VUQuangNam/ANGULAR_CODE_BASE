@@ -6,11 +6,11 @@ import { Component, Input, OnInit } from '@angular/core';
     styleUrls: ['./list-base.component.scss']
 })
 export class ListBaseComponent implements OnInit {
-    @Input() data: any;
-
+    @Input('data') data: any;
+    @Input('fakeData') fakeData: any;
     constructor() { }
 
     ngOnInit(): void {
     }
-
+  
 }

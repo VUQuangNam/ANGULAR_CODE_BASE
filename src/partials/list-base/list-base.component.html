@@ -1,1 +1,13 @@
-{{data | json}}
+<table>
+    <tr>
+        <th *ngFor="let a of data" [style.width]="a.width+'px'">
+            {{a.name}}
+        </th>
+    </tr>
+    <tr *ngFor="let item of fakeData">
+        <td *ngFor="let a of data" [style.width]="a.width+'px'">
+            {{item[a.id]}}
+        </td>
+    </tr>
+
+</table>
