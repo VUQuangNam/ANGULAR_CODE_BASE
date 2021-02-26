@@ -114,25 +114,37 @@ export class Import {
             {
                 id: 'id',
                 name: 'Mã đơn',
-                type: 'text'
+                type: 'text',
+                label: 'Tên'
             },
             {
                 id: 'id2',
                 name: 'Mã đơn2',
                 type: 'text',
+                label: 'Họ và đệm'
             },
             {
                 id: 'id3',
                 name: 'Mã đơn3',
                 type: 'selected',
-                data: []
+                data: [],
+                label: 'Giới tính'
             },
             {
                 id: 'id4',
                 name: 'Mã đơn4',
                 type: 'selected',
-                data: []
+                data: [],
+                label: 'Nghề nghiệp'
+            },
+            {
+                id: 'id4',
+                name: 'Mã đơn4',
+                type: 'radio',
+                data: [],
+                label: 'Nghề nghiệp'
             }
+
         ];
     }
 }

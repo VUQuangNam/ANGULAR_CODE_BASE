@@ -1,28 +1,27 @@
-<div *ngFor="let item of data">
-    <div *ngIf="item.type ==='text' || item.type ==='number'">
-        <input
-            type="{{item.type}}"
-            id="{{item.id}}"
-            [value]="item?.value"
-            [name]="item.id"
-            [(ngModel)]="model[item.id]"
-        >
+<div class="form-group">
+    <div class="form-group-item" *ngFor="let item of data">
+        <div *ngIf="item.type ==='text' || item.type ==='number'">
+            <label for=""> {{item.label}} </label>
+            <input type=" {{item.type}}" id="{{item.id}}" [value]="item?.value" [name]="item.id"
+                [(ngModel)]="model[item.id]">
+        </div>
+        <div *ngIf="item.type ==='selected'">
+            <label for=""> {{item.label}} </label>
+            <select [(ngModel)]="model[item.id]">
+                <option *ngFor="let i of item.data" value="{{i.value}}">
+                    {{i.value || 1}}
+                </option>
+            </select>
+        </div>
+        <div *ngIf="item.type ==='radio'">
+            <mat-radio-group aria-label="Select an option">
+                <mat-radio-button value="1">Nam</mat-radio-button>
+                <mat-radio-button value="2">Nữ</mat-radio-button>
+            </mat-radio-group>
+        </div>
+        <div *ngIf="item.type ==='checkbox'">
+            123
+        </div>
     </div>
-    <div *ngIf="item.type ==='selected'">
-        <select [(ngModel)]="model[item.id]">
-            <option
-                *ngFor="let i of item.data"
-                value="{{i.value}}"
-            >
-                {{i.value || 1}}
-            </option>
-        </select>
-    </div>
-    <!-- <div *ngIf="item.type ==='radio'">
-        123
-    </div>
-    <div *ngIf="item.type ==='checkbox'">
-        123
-    </div> -->
+    <button (click)="onClick()">Hoàn thành</button>
 </div>
-<button (click)="onClick()">11111111111</button>

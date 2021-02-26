@@ -2,7 +2,8 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
     selector: 'app-form-layout',
-    templateUrl: './form.component.html'
+    templateUrl: './form.component.html',
+    styleUrls: ['./form.component.scss']
 })
 
 export class FormComponent implements OnInit {
