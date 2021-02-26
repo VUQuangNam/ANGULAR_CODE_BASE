@@ -14,9 +14,15 @@
                 *ngFor="let i of item.data"
                 value="{{i.value}}"
             >
-                {{i || 1}}
+                {{i.value || 1}}
             </option>
         </select>
     </div>
+    <!-- <div *ngIf="item.type ==='radio'">
+        123
+    </div>
+    <div *ngIf="item.type ==='checkbox'">
+        123
+    </div> -->
 </div>
 <button (click)="onClick()">11111111111</button>

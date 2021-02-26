@@ -1,21 +1,21 @@
-export enum ExportStatuses {
-    PENDING = 'pending',
-    DELIVERY = 'delivery',
-    CANCELLED = 'cancelled',
-    CONFIRMED = 'confirmed'
-}
+// export enum ExportStatuses {
+//     PENDING = 'pending',
+//     DELIVERY = 'delivery',
+//     CANCELLED = 'cancelled',
+//     CONFIRMED = 'confirmed'
+// }
 
-export enum ExportTypes {
-    TRANSFER = 1,
-    EXPORT = 2
-}
+// export enum ExportTypes {
+//     TRANSFER = 1,
+//     EXPORT = 2
+// }
 
-export enum ExportNormalStatuses {
-    PENDING = 'Chờ duyệt phiếu',
-    DELIVERY = 'Đang vận chuyển',
-    CONFIRMED = 'Đã hoàn thành',
-    CANCELLED = 'Đã hủy phiếu'
-}
+// export enum ExportNormalStatuses {
+//     PENDING = 'Chờ duyệt phiếu',
+//     DELIVERY = 'Đang vận chuyển',
+//     CONFIRMED = 'Đã hoàn thành',
+//     CANCELLED = 'Đã hủy phiếu'
+// }
 
 export class Export {
     id!: string;
@@ -147,6 +147,18 @@ export class Export {
                 id: 'id3',
                 name: 'Mã đơn3',
                 type: 'selected',
+                data: []
+            },
+            {
+                id: 'id3',
+                name: 'Mã đơn3',
+                type: 'radio',
+                data: []
+            },
+            {
+                id: 'id3',
+                name: 'Mã đơn3',
+                type: 'checkbox',
                 data: []
             }
         ];

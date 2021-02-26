@@ -10,10 +10,7 @@ export class FormComponent implements OnInit {
     @Output() callback = new EventEmitter<any>();
     model: any = {};
 
-    ngOnInit() {
-        this.data[2].data = [{ value: 1 }, { value: 2 }, { value: 3 }]
-        console.log(this.model['id']);
-    }
+    ngOnInit() { }
 
     onClick = () => {
         this.callback.emit(this.model);
