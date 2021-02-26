@@ -7,13 +7,16 @@ import { Helpers, HttpUtilsService, TypesUtilsService } from 'src/common/utils';
 
 // Base Component
 import { FormComponent } from './form/form.component';
+import { ListBaseComponent } from './list-base/list-base.component';
 
 @NgModule({
     declarations: [
         FormComponent,
+        ListBaseComponent,
     ],
     exports: [
         FormComponent,
+        ListBaseComponent
     ],
     imports: [
         CommonModule,
