@@ -4,8 +4,10 @@ import { Import } from 'src/common/models/import.model';
 
 @Component({
     selector: 'app-create',
-    templateUrl: './create.component.html',
-    styleUrls: ['./create.component.scss']
+    template: `<app-form-layout
+    [(data)]="formCreate"
+    (callback)="callBackData($event)"
+></app-form-layout>`
 })
 export class CreateComponent implements OnInit {
     model = new Import;
@@ -20,6 +22,8 @@ export class CreateComponent implements OnInit {
 
     callBackData = (data: any) => {
         console.log(data);
+        console.log('ok');
+
     }
 
 }

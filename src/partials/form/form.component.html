@@ -1,14 +1,25 @@
 <div class="form-group">
-    <div class="form-group-item" *ngFor="let item of data">
+    <div
+        class="form-group-item"
+        *ngFor="let item of data"
+    >
         <div *ngIf="item.type ==='text' || item.type ==='number'">
             <label for=""> {{item.label}} </label>
-            <input type=" {{item.type}}" id="{{item.id}}" [value]="item?.value" [name]="item.id"
-                [(ngModel)]="model[item.id]">
+            <input
+                type=" {{item.type}}"
+                id="{{item.id}}"
+                [value]="item?.value"
+                [name]="item.id"
+                [(ngModel)]="model[item.id]"
+            >
         </div>
         <div *ngIf="item.type ==='selected'">
             <label for=""> {{item.label}} </label>
             <select [(ngModel)]="model[item.id]">
-                <option *ngFor="let i of item.data" value="{{i.value}}">
+                <option
+                    *ngFor="let i of item.data"
+                    value="{{i.value}}"
+                >
                     {{i.value || 1}}
                 </option>
             </select>
