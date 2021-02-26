@@ -5,6 +5,7 @@ import { PartialsModule } from 'src/partials/partials.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CreateComponent } from './create/create.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ListComponent } from './list/list.component';
 
 @NgModule({
@@ -16,7 +17,8 @@ import { ListComponent } from './list/list.component';
     imports: [
         BrowserModule,
         AppRoutingModule,
-        PartialsModule
+        PartialsModule,
+        BrowserAnimationsModule
     ],
     providers: [],
     bootstrap: [AppComponent]

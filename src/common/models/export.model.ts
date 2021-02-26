@@ -136,7 +136,7 @@ export class Export {
             {
                 id: 'id2',
                 name: 'Mã đơn2',
-                type: 'text',
+                type: 'number',
             },
             {
                 id: 'id4',

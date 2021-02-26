@@ -1,12 +1,29 @@
+// export enum ExportStatuses {
+//     PENDING = 'pending',
+//     DELIVERY = 'delivery',
+//     CANCELLED = 'cancelled',
+//     CONFIRMED = 'confirmed'
+// }
 
+// export enum ExportTypes {
+//     TRANSFER = 1,
+//     EXPORT = 2
+// }
 
-export class Import {
+// export enum ExportNormalStatuses {
+//     PENDING = 'Chờ duyệt phiếu',
+//     DELIVERY = 'Đang vận chuyển',
+//     CONFIRMED = 'Đã hoàn thành',
+//     CANCELLED = 'Đã hủy phiếu'
+// }
+
+export class Export {
     id!: string;
     type!: number;
     note!: string;
     reason!: string;
 
-    constructor(state?: Import) {
+    constructor(state?: Export) {
         if (state) {
             if (state.id) this.id = state.id;
             if (state.type) this.type = state.type;
@@ -16,7 +33,7 @@ export class Import {
     }
 
     /**
-     * Get table collums 
+     * Get table collums
      * @public
      */
     public get collums(): Array<any> {
@@ -114,37 +131,36 @@ export class Import {
             {
                 id: 'id',
                 name: 'Mã đơn',
-                type: 'text',
-                label: 'Tên'
+                type: 'text'
             },
             {
                 id: 'id2',
                 name: 'Mã đơn2',
                 type: 'text',
-                label: 'Họ và đệm'
+            },
+            {
+                id: 'id4',
+                name: 'Mã đơn4',
+                type: 'number',
             },
             {
                 id: 'id3',
                 name: 'Mã đơn3',
                 type: 'selected',
-                data: [],
-                label: 'Giới tính'
+                data: []
             },
             {
-                id: 'id4',
-                name: 'Mã đơn4',
-                type: 'selected',
-                data: [],
-                label: 'Nghề nghiệp'
-            },
-            {
-                id: 'id4',
-                name: 'Mã đơn4',
+                id: 'id3',
+                name: 'Mã đơn3',
                 type: 'radio',
-                data: [],
-                label: 'Nghề nghiệp'
+                data: []
+            },
+            {
+                id: 'id3',
+                name: 'Mã đơn3',
+                type: 'checkbox',
+                data: []
             }
-
         ];
     }
 }
