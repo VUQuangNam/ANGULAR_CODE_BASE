@@ -1,21 +1,12 @@
-table { 
-	border-collapse: collapse; 
-	}
-
-/* Zebra striping */
-tr:nth-of-type(odd) { 
-	background: #eee; 
-}
-
-th { 
-	background: #3498db; 
-	color: white; 
-	font-weight: bold; 
-}
-
-td, th { 
-	padding: 10px; 
-	border: 1px solid #ccc; 
-	text-align: left; 
-	font-size: 18px;
-}
+table {
+    width: 100%;
+  }
+  
+  .mat-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+  
+  td, th {
+    width: 25%;
+  }
