@@ -67,13 +67,13 @@ export class Export {
                 id: 'created_at',
                 name: 'Ngày chuyển',
                 width: 200,
-                type: 'text',
+                type: 'date',
             },
             {
                 id: 'received_at',
                 name: 'Ngày nhận',
                 width: 200,
-                type: 'text',
+                type: 'date',
             },
             {
                 id: 'status_name',
