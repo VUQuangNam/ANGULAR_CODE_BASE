@@ -3,8 +3,7 @@ import { Export } from 'src/common/models/export.model';
 
 @Component({
     selector: 'app-list',
-    templateUrl: './list.component.html',
-    styleUrls: ['./list.component.scss']
+    template: `<app-list-base [(data)]="data13" [fakeData]= "fakeData"></app-list-base>`
 })
 export class ListComponent implements OnInit {
     conFigTable = new Export;
@@ -45,7 +44,6 @@ export class ListComponent implements OnInit {
 
     ngOnInit(): void {
         this.data13 = this.conFigTable.collums;
-        console.log(this.data13);
     }
 
 }
