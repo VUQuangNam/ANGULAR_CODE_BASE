@@ -17,13 +17,10 @@ export class CreateComponent implements OnInit {
     ngOnInit(): void {
         this.formCreate = this.model.viewCreate;
         this.formCreate[2].data = [{ value: 1 }, { value: 2 }, { value: 3 }]
-        console.log(this.formCreate);
     }
 
     callBackData = (data: any) => {
         console.log(data);
-        console.log('ok');
-
     }
 
 }

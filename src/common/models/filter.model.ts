@@ -5,25 +5,13 @@
 //     CONFIRMED = 'confirmed'
 // }
 
-// export enum ExportTypes {
-//     TRANSFER = 1,
-//     EXPORT = 2
-// }
-
-// export enum ExportNormalStatuses {
-//     PENDING = 'Chờ duyệt phiếu',
-//     DELIVERY = 'Đang vận chuyển',
-//     CONFIRMED = 'Đã hoàn thành',
-//     CANCELLED = 'Đã hủy phiếu'
-// }
-
-export class Export {
+export class FilterModel {
     id!: string;
     type!: number;
     note!: string;
     reason!: string;
 
-    constructor(state?: Export) {
+    constructor(state?: FilterModel) {
         if (state) {
             if (state.id) this.id = state.id;
             if (state.type) this.type = state.type;

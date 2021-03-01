@@ -25,7 +25,10 @@
             </select>
         </div>
         <div *ngIf="item.type ==='radio'">
-            <mat-radio-group aria-label="Select an option">
+            <mat-radio-group
+                [(ngModel)]="model[item.id]"
+                aria-label="Select an option"
+            >
                 <mat-radio-button value="1">Nam</mat-radio-button>
                 <mat-radio-button value="2">Nữ</mat-radio-button>
             </mat-radio-group>

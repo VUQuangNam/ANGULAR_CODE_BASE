@@ -42,81 +42,67 @@ export class Export {
                 id: 'id',
                 name: 'Mã đơn',
                 width: 100,
-                active: true,
-                type: 'link',
-                to: 'inventory/exports'
+                type: 'number'
             },
             {
                 id: 'created_by',
                 name: 'Người tạo',
                 width: 200,
-                active: true,
                 type: 'object',
-                index: 'name'
+                idSub: 'Name'
             },
             {
                 id: 'source',
                 name: 'Từ chi nhánh',
                 width: 200,
-                active: true,
-                type: 'object',
-                index: 'name'
+                type: 'text',
             },
             {
                 id: 'store',
                 name: 'Đến chi nhánh',
                 width: 200,
-                active: true,
-                type: 'object',
-                index: 'name'
+                type: 'text',
             },
             {
                 id: 'created_at',
                 name: 'Ngày chuyển',
                 width: 200,
-                active: true,
-                type: 'text'
+                type: 'text',
             },
             {
                 id: 'received_at',
                 name: 'Ngày nhận',
                 width: 200,
-                active: true,
-                type: 'text'
+                type: 'text',
             },
             {
                 id: 'status_name',
                 name: 'Trạng thái',
                 width: 200,
-                active: true,
-                type: 'text'
+                type: 'text',
             },
             {
                 id: 'total_quantity',
                 name: 'Số lượng',
                 width: 100,
-                active: false,
-                type: 'text'
+                type: 'number',
             },
             {
                 id: 'total_price',
                 name: 'Tổng tiền',
                 width: 150,
-                active: false,
-                type: 'number'
+                type: 'number',
             },
             {
                 id: 'note',
                 name: 'Ghi chú',
                 width: 200,
-                active: false,
                 type: 'text',
             },
             {
                 id: 'updated_at',
                 name: 'Cập nhật cuối',
                 width: 200,
-                active: false,
                 type: 'text'
             }
         ];

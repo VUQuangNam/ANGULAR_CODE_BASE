@@ -12,7 +12,9 @@ export class ListComponent implements OnInit {
     fakeData = [
         {
             id: 1,
-            created_by: "Hoàng Thế Tài",
+            created_by: {
+                Name: "Hoàng Thế Tài"
+            },
             source: "abc",
             store: "xyz",
             created_at: "01-02",
@@ -25,7 +27,9 @@ export class ListComponent implements OnInit {
         },
         {
             id: 2,
-            created_by: "Hoàng Thế Tài",
+            created_by: {
+                Name: "Hoàng Thế Tài"
+            },
             source: "xyz",
             store: "abc",
             created_at: "2019",
@@ -41,6 +45,7 @@ export class ListComponent implements OnInit {
 
     ngOnInit(): void {
         this.data13 = this.conFigTable.collums;
+        console.log(this.data13);
     }
 
 }

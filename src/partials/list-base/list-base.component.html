@@ -1,12 +1,21 @@
 <table>
     <tr>
-        <th *ngFor="let a of data" [style.width]="a.width+'px'">
+        <th
+            *ngFor="let a of data"
+            [style.width]="a.width+'px'"
+        >
             {{a.name}}
         </th>
     </tr>
     <tr *ngFor="let item of fakeData">
-        <td *ngFor="let a of data" [style.width]="a.width+'px'">
-            {{item[a.id]}}
+        <td
+            *ngFor="let a of data"
+            [style.width]="a.width+'px'"
+        >
+            <span *ngIf="a.type === 'number'">{{item[a.id] | number}}</span>
+            <span *ngIf="a.type === 'text'">{{item[a.id]}}</span>
+            <span *ngIf="a.type === 'object'">{{item[a.id][a.idSub]}}</span>
+            <span *ngIf="a.type === 'date'">{{item[a.id]| date}}</span>
         </td>
     </tr>
 
