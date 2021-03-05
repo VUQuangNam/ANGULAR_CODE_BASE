@@ -115,7 +115,8 @@ export class Import {
                 id: 'id',
                 name: 'Mã đơn',
                 type: 'text',
-                label: 'Tên'
+                label: 'Tên',
+                class: 'ci_input_text'
             },
             {
                 id: 'id2',

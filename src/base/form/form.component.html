@@ -1,7 +1,8 @@
-<div class="form-group">
+<div class="row">
     <div
-        class="form-group-item"
         *ngFor="let item of data"
+        class="col-6"
+        [class]="item.class"
     >
         <div *ngIf="item.type ==='text' || item.type ==='number'">
             <label for=""> {{item.label}} </label>
@@ -37,5 +38,8 @@
             123
         </div>
     </div>
-    <button (click)="onClick()">Hoàn thành</button>
+    <button
+        class="btn btn-success"
+        (click)="onClick()"
+    >Hoàn thành</button>
 </div>

@@ -17,11 +17,11 @@ export class CreateComponent implements OnInit {
 
     ngOnInit(): void {
         this.formCreate = this.model.viewCreate;
-        this.isLoading = false;
+        this.isLoading = true;
         this.formCreate[2].data = [{ value: 1 }, { value: 2 }, { value: 3 }]
-        setTimeout(() => {
-            this.isLoading = true;
-        }, 3000);
+        // setTimeout(() => {
+        //     this.isLoading = true;
+        // }, 3000);
     }
 
     callBackData = (data: any) => {
